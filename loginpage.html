@@ -1,33 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login Page</title>
+  <meta charset="utf-8">
+  <title>Olaf Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url("/images/olaf4.png") no-repeat center center fixed;
+      background-size: cover; /* makes image cover full screen */
+      min-height: 100vh;
+      display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center; 
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* changed from center */
+      padding-top: 80px;       /* added to move up */
+    }
+    .login-box {
+      width: 420px;           /* increased from 320px */
+      max-width: 95%;         /* slightly increased for responsiveness */
+      padding: 30px;
+      box-sizing: border-box; /* ensures padding is inside width */
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-align: center;
+      margin: 0; /* removes any default margin */
+    }
+    .login-box h2 {
+      margin: 0 0 15px 0;
+      font-size: 24px;
+      color: #1E90FF;
+    }
+    .login-box p {
+      margin: 0 0 20px 0;
+      color: #004080;
+      font-size: 13px;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #1E90FF;
+      background: rgba(255, 255, 255, 0.8);
+      outline: none;
+      font-size: 14px;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      background: #1E90FF;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .login-box button:hover {
+      background: #63b3ff;
+      box-shadow: 0 6px 18px rgba(30, 144, 255, 0.4);
+      transform: translateY(-2px);
+    }
+    .login-box a {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #004080;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
 </head>
-<body style="margin:0; padding:0; font-family:Arial, sans-serif; 
-             background:url('https://i.pinimg.com/originals/f3/0f/bc/f30fbc1c43e236ad47d5aee46e6f6279.jpg') 
-             no-repeat center center fixed; 
-             background-size:cover;">
-
-  <div style="width:100%; height:100vh; display:flex; justify-content:center; align-items:center;">
-    <div style="background:rgba(255,255,255,0.9); padding:40px; border-radius:15px; 
-                box-shadow:0px 4px 10px rgba(0,0,0,0.3); width:300px; text-align:center;">
-      <h2 style="color:#1E90FF; margin-bottom:20px;">Login</h2>
-      
-      <form>
-        <input type="text" placeholder="Username" 
-               style="width:100%; padding:10px; margin:10px 0; border:1px solid #1E90FF; 
-                      border-radius:8px; outline:none;"><br>
-        <input type="password" placeholder="Password" 
-               style="width:100%; padding:10px; margin:10px 0; border:1px solid #1E90FF; 
-                      border-radius:8px; outline:none;"><br>
-        <button type="submit" 
-                style="width:100%; padding:10px; background:#1E90FF; color:white; 
-                       border:none; border-radius:8px; font-size:16px; cursor:pointer;">
-          Login
-        </button>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Welcome</h2>
+      <p>Sign in to continue</p>
+      <form onsubmit="event.preventDefault(); alert('Demo only — add backend here!');">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
       </form>
+      <a href="#">Forgot password?</a>
     </div>
   </div>
-
 </body>
 </html>
