@@ -10,7 +10,9 @@
 		<LABEL for="num2">Enter second number:</LABEL>
 		<INPUT type="number" id="num2"><br>
 		<BUTTON onclick="findsum()">Click to find sum</BUTTON>
-		<p id="sum">..</p>
+		<BUTTON onclick="findmul()">Click to find multiplication</BUTTON>
+		<p id="sum"></p>
+		<p id="mul"></p>
 		<SCRIPT>
 			function findsum(){
 					let one=Number(document.getElementById("num1").value);
@@ -19,6 +21,12 @@
 				        document.getElementById("sum").innerHTML=sum;
 
 					}			
+			function findmul(){
+					let one=Number(document.getElementById("num1").value);
+					let two=Number(document.getElementById("num2").value);
+					let mul=one * two;
+					document.getElementById("mul").innerHTML=mul;
+					}
 		</SCRIPT>
 	
 </BODY>
