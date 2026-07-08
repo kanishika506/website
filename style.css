@@ -1,0 +1,18 @@
+body{
+    background-color:black;
+}
+h1{
+    color:rgb(255, 255, 255);
+}
+#p1{
+    color:#2c81e9;
+}
+#p2{
+    color:hsl(282, 81%, 54%);
+}
+#p3{
+    color:#2ce9e9;
+}
+#p4{
+    color:#e14691;
+}
